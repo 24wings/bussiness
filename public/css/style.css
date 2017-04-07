@@ -217,3 +217,7 @@ i.online-service {
     right: 20px;
     top: 20%;
 }
+
+.media-body .name {
+    color: gray;
+}
