@@ -1,0 +1,219 @@
+body {
+    /*background: url(https://www.h6app.com/Public/Home/images/bg.png) no-repeat;*/
+    /*background: linear-gradient(to bottom, #0082c9, #3e9ed8 100%, #d8d8d8);*/
+    /*background-size: cover;*/
+    color: #000;
+    padding-bottom: 2000px;
+}
+
+header {
+    color: #fff;
+    background: linear-gradient(to bottom, #0082c9, #3e9ed8 100%, #d8d8d8);
+}
+
+.navbar {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, .25);
+    border: none;
+    text-align: center;
+}
+
+.navbar-center {
+    float: none;
+    margin: 0 auto;
+    text-align: center;
+    display: inline-block;
+}
+
+.navbar-nav .active {
+    border-bottom: 2px solid #fff;
+}
+
+.jumbotron {
+    background: linear-gradient(to bottom, #0082c9, #3e9ed8 100%, #d8d8d8);
+    padding: 0;
+    margin-bottom: 0;
+    background-size: 100% auto, cover;
+    height: 100vh;
+    min-height: 700px;
+    border-radius: 0 !important;
+    position: relative;
+}
+
+.jumbotron .topbanner {
+    opacity: 1 !important;
+    display: block;
+    transform: translateY(0px);
+    background: url(https://nextcloud.com/wp-content/themes/next/assets/img/home/top-banner@2x.png?x16328) bottom 0 right 0/contain no-repeat;
+    width: auto;
+    height: auto;
+    max-width: 55vw;
+    max-height: 90vh;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.topheader {
+    position: absolute;
+    top: 20vh;
+    opacity: 1 !important;
+    text-align: center;
+}
+
+.start-btn {
+    color: #fff;
+    background: transparent;
+    border-radius: 50px;
+    padding: 10px 20px;
+    border: 1px solid #fff !important;
+}
+
+.start-btn:hover {
+    color: #0082c9;
+    background: #fff;
+}
+
+
+/*懒人翻转*/
+
+.lanren {
+    width: 1000px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.flip-3d {
+    perspective: 1200px;
+    width: 33%;
+    float: left;
+}
+
+.flip-3d figure {
+    color: rosybrown;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 1s transform;
+    font-size: 1.6rem;
+    margin: 25px;
+}
+
+.flip-3d figure img {
+    width: 100%;
+    height: auto;
+}
+
+.flip-3d figure figcaption {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: rotateY(.5turn) translateZ(1px);
+    background: rgba(255, 255, 255, 0.9);
+    text-align: center;
+    padding-top: 45%;
+    opacity: 0.6;
+    transition: 1s .5s opacity;
+}
+
+.flip-3d:hover figure {
+    transform: rotateY(.5turn);
+}
+
+.flip-3d:hover figure figcaption {
+    opacity: 1;
+}
+
+.flip-3d figure:after {
+    content: " ";
+    display: block;
+    height: 8vw;
+    width: 100%;
+    transform: rotateX(90deg);
+    background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+@media screen and (max-width: 800px) {
+    #flip-3d {
+        perspective-origin: center top;
+    }
+    div#flip-3d figure {
+        float: none;
+        width: 50%;
+        margin: 0 auto;
+        margin-bottom: 12vw;
+    }
+    .flip-3d figure figcaption {
+        font-size: 0.8rem;
+    }
+    div#flip-3d figure:last-child {
+        display: none;
+    }
+}
+
+
+/*在线聊天窗口*/
+
+.launcher-close-icon {
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOBAMAAADtZjDiAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAG1BMVEUAAAD///////////////////////////8AAADr8xjQAAAAB3RSTlMAM7cPx7jIAE21/gAAAAFiS0dEAIgFHUgAAAAJcEhZcwAACxIAAAsSAdLdfvwAAABESURBVAjXYxAyYGBgYFZkUHcG0ialDCYlBgzM7slA7MxgUgaUNCkzdgfJMbunlIDUMpiUg7hwGiYOVQfTBzMHZi7UHgCB3RAZ7HszogAAAABJRU5ErkJggg==);
+    background-size: 14px 14px;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: rotate(-30deg);
+}
+
+i.online-service {
+    position: fixed;
+    top: 80vh;
+    right: 10vw;
+    background: #4D7CEA;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 80px;
+    font-size: 3em;
+    color: #fff;
+}
+
+.modal-title {
+    background: #4D7CEA;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+    color: #fff;
+    text-align: center;
+}
+
+
+/*在线聊天*/
+
+#message-box .modal-body {
+    height: 450px;
+}
+
+.media-object {
+    width: 50px;
+}
+
+.media {
+    padding: 5px 15px;
+}
+
+.media:hover {
+    background: #f7f8fa;
+    border-top: 1px solid #ebedf1;
+    border-bottom: 1px solid #ebedf1;
+}
+
+.media-body {
+    position: relative;
+}
+
+.media-body .time {
+    position: absolute;
+    right: 20px;
+    top: 20%;
+}

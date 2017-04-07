@@ -1,0 +1,147 @@
+{% extends '../layouts/base.html' %} {% block content%}
+
+<header>
+
+
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+                <a class="navbar-brand" href="#">开发者联盟</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse navbar-center">
+                <ul class="nav navbar-nav navbar-center">
+                    <li class="active text-center"><a href="/">首页</a></li>
+                    <li><a href="#">建站</a></li>
+                    <li><a href="#">软件开发</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">设计 <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
+
+
+    <div class="jumbotron">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-sm-6 topheader">
+                    <h2>web全栈开发</h2>
+                    <h4>简洁,优美,方便使用的现代化web应用程序</h4>
+                    <h2>
+                        <div class="btn start-btn">开启应用之旅</div>
+                        <div class="btn start-btn">开启设计之旅</div>
+                    </h2>
+                </div>
+                <div class="col-md-6 col-sm-6 topbanner">
+                    <img src="https://nextcloud.com/wp-content/themes/next/assets/img/home/empty.png?x16328" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{#
+<div class="container">
+    <div class="col-md-6">
+        <h2>专业的解决方案</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://nextcloud.com/wp-content/themes/next/assets/img/home/sprite_screen.jpg?x16328" alt="" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</div>
+#}
+
+<div class="container">
+    <h2 class="text-center">精选案例</h2>
+    <div class="lanren">
+        <div class="flip-3d">
+            <figure>
+                <img src="http://demo.lanrenzhijia.com/2016/pic0406/images/1.jpg" alt="精选案例">
+                <figcaption>精选案例</figcaption>
+            </figure>
+        </div>
+        <div class="flip-3d">
+            <figure>
+                <img src="http://demo.lanrenzhijia.com/2016/pic0406/images/2.jpg" alt="精选案例">
+                <figcaption>精选案例</figcaption>
+            </figure>
+        </div>
+        <div class="flip-3d">
+            <figure>
+                <img src="http://demo.lanrenzhijia.com/2016/pic0406/images/3.jpg" alt="精选案例">
+                <figcaption>精选案例</figcaption>
+            </figure>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<!--客服-->
+<i class="glyphicon glyphicon-user online-service" data-toggle="modal" href='#message-box'></i>
+
+
+<div class="modal fade" id="message-box">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff">&times;</button>
+                <div class="modal-title">
+                    <p class=" text-center">与开发者联盟的会话</p>
+
+
+                </div>
+
+            </div>
+            <div class="modal-body">
+                <!--消息列表-->
+
+                <div class="media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object img-circle" src="https://static.intercomassets.com/avatars/712227/square_128/Profile-1486887750.jpg?1486887750"
+                            alt="Image">
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">开发者联盟</h4>
+                        <p>你好,请问有什么能帮助你的吗</p>
+                        <p class="time">5分钟之前</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock%} {%block script %}
+<script>
+</script>
+{% endblock %}
