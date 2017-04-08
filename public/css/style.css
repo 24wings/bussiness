@@ -230,7 +230,7 @@ i.online-service {
     padding-top: 200px;
 }
 
-#devApp .app-btn {
+.app-btn {
     background: #fd5c63;
     border-radius: 5px;
     padding: 10px 20px;
@@ -322,17 +322,17 @@ i.online-service {
     overflow: hidden;
 }
 
-.work .img-responsive:hover {
+.work:hover .img-responsive {
     transform: scale(1.5, 1.5);
     transition-duration: 0.5s;
 }
 
 .work .summary {
     position: absolute;
-    top: 20%;
+    top: 35%;
     left: 30%;
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.2em;
     border: 2px solid #fff;
-    padding: 5px 25px;
+    padding: 0px 60px;
 }
