@@ -10,15 +10,76 @@
     <title>万维小程序</title>
     <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet/less" type="text/css" href="/libs/bootstrap/less/bootstrap.less">
+    <link rel="stylesheet" href="/animate.css/animate.min.css">
     <link rel="stylesheet" href="/css/style.css">
+
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar">
+
     {% block content%} {% endblock%}
 
     <script src="/less/dist/less.min.js"></script>
     <script src="/jquery/dist/jquery.min.js"></script>
     <script src="/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+        $.fn.extend({
+            animateCss: function(animationName) {
+                var animationEnd = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+                this.addClass('animated ' + animationName).one(animationEnd, function() {
+                    $(this).removeClass('animated ' + animationName);
+                });
+            }
+        });
+        $('body').scrollspy({
+            target: '#navbar'
+        });
+        $('[data-spy="scroll"]').each(function() {
+            var $spy = $(this).scrollspy('refresh');
+        });
+        $('#navbar').on('activate.bs.scrollspy', function() {
+            // do something…
+            var target = $('.navbar-nav li.active a').attr('href');
+            switch (target) {
+
+                case '#case':
+
+                    $('#case .flip-3d').each(function(index, el) {
+                        setTimeout(function() {
+                            $(el).animateCss('zoomInDown');
+                        }, index * 500);
+                    });
+                    break;
+                case "#devApp":
+                    $('#devApp .left').animateCss('bounceInLeft');
+                    $('#devApp .right').animateCss('bounceInRight');
+                    break;
+
+
+            }
+
+        });
+        $('#devApp .app-btn').mouseenter(function() {
+            $(this).animateCss('flash')
+        });
+
+        $(window).scroll(function(event) {
+            var top = $(window).scrollTop();
+            if (top > 600) {
+
+                $('.navbar-default').addClass('white-bg');
+                $('.navbar-default').animateCss('pulse');
+
+            } else {
+                $('.navbar-default').removeClass('white-bg');
+
+                $('.navbar-default').animateCss('pulse')
+            }
+
+        });
+    </script>
+
+    {% block script %} {% endblock %}
 </body>
 
 </html>

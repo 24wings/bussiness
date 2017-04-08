@@ -3,7 +3,7 @@
 <header>
 
 
-    <nav class="navbar navbar-default" role="navigation">
+    <nav class="navbar navbar-default navbar-fixed-top " role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="container">
             <div class="navbar-header">
@@ -17,10 +17,11 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse navbar-center">
+            <div class="collapse navbar-collapse navbar-ex1-collapse navbar-center" id="navbar">
                 <ul class="nav navbar-nav navbar-center">
-                    <li class="active text-center"><a href="/">首页</a></li>
-                    <li><a href="#">建站</a></li>
+                    <li class="active text-center"><a href="#">首页</a></li>
+                    <li><a href="#case">精选案例</a></li>
+                    <li><a href="#devApp">极致精选</a></li>
                     <li><a href="#">软件开发</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">设计 <b class="caret"></b></a>
@@ -59,45 +60,79 @@
     </div>
 </header>
 
-{#
-<div class="container">
-    <div class="col-md-6">
-        <h2>专业的解决方案</h2>
-        <div class="row">
-            <div class="col-md-6">
-                <img src="https://nextcloud.com/wp-content/themes/next/assets/img/home/sprite_screen.jpg?x16328" alt="" class="img-responsive">
+<section id="case">
+
+    <div class="container-fluid">
+        <h2 class="text-center">精选案例</h2>
+        <div class="lanren">
+            <div class="flip-3d">
+                <figure>
+                    <img src="http://demo.lanrenzhijia.com/2016/pic0406/images/1.jpg" alt="精选案例">
+                    <figcaption>精选案例</figcaption>
+                </figure>
+            </div>
+            <div class="flip-3d">
+                <figure>
+                    <img src="http://demo.lanrenzhijia.com/2016/pic0406/images/2.jpg" alt="精选案例">
+                    <figcaption>精选案例</figcaption>
+                </figure>
+            </div>
+            <div class="flip-3d">
+                <figure>
+                    <img src="http://demo.lanrenzhijia.com/2016/pic0406/images/3.jpg" alt="精选案例">
+                    <figcaption>精选案例</figcaption>
+                </figure>
             </div>
         </div>
     </div>
-</div>
-#}
 
-<div class="container">
-    <h2 class="text-center">精选案例</h2>
-    <div class="lanren">
-        <div class="flip-3d">
-            <figure>
-                <img src="http://demo.lanrenzhijia.com/2016/pic0406/images/1.jpg" alt="精选案例">
-                <figcaption>精选案例</figcaption>
-            </figure>
-        </div>
-        <div class="flip-3d">
-            <figure>
-                <img src="http://demo.lanrenzhijia.com/2016/pic0406/images/2.jpg" alt="精选案例">
-                <figcaption>精选案例</figcaption>
-            </figure>
-        </div>
-        <div class="flip-3d">
-            <figure>
-                <img src="http://demo.lanrenzhijia.com/2016/pic0406/images/3.jpg" alt="精选案例">
-                <figcaption>精选案例</figcaption>
-            </figure>
+</section>
+
+<section class="container" id="readmore">
+
+    <h3 class="text-center">基于 Bootstrap 构建的网站</h3>
+    <div class="line-sm"></div>
+    <div class="row">
+        <div class="row col-md-8 col-md-offset-2 text-center summary">
+            <span>开发者量是一家创造性的网络解决方案公司，结合前端技术与巧妙的设计思路努力带来了独特的人机体验。</span><br>
+            <span>我们的愿望是让每一个人享受网络带来的美好生活。我们专注于品质和独特的解决方案，从我们的工作可以看出，在所有的媒体：网络、平面和移动。</span><br>
+            <span>我们总是希望接受挑战，利用我们所有的知识和经验，概念开发，设计和技术实现把每一个新项目打造成精品。</span><br>
+            <span> SEA INTERACTION is a strategy, branding, and design company.</span>
         </div>
     </div>
-</div>
+    <div class="row text-center">
+        <div class="btn  btn-lg readmore-btn">了解更多</div>
+    </div>
+</section>
 
 
 
+
+
+
+<section id="devApp">
+    <!--开发app-->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4 text-center col-md-offset-2 left">
+                <h1>优良精美.极致体验</h1>
+                <p>生命短暂,为你实现每一个灵感。</p>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+                <div class="row"></div>
+
+                <div class="row">
+                    <div class="btn app-btn ">设计App</div>
+                    <div class="btn app-btn ">定制App</div>
+                </div>
+            </div>
+            <div class="col-md-4 right">
+                <img src="https://dashpop.com/images/devices-bg-1@2x.png" alt="" class="img-responsive">
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!--客服-->
@@ -111,18 +146,13 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="color:#fff">&times;</button>
                 <div class="modal-title">
                     <p class=" text-center">与开发者联盟的会话</p>
-
-
                 </div>
-
             </div>
             <div class="modal-body">
                 <!--消息列表-->
-
                 <div class="media">
                     <a class="pull-left" href="#">
-                        <img class="media-object img-circle" src="https://static.intercomassets.com/avatars/712227/square_128/Profile-1486887750.jpg?1486887750"
-                            alt="Image">
+                        <img class="media-object img-circle" src="https://static.intercomassets.com/avatars/712227/square_128/Profile-1486887750.jpg?1486887750" alt="Image">
                     </a>
                     <div class="media-body">
                         <p class="name">开发者联盟</p>
@@ -130,7 +160,6 @@
                         <p class="time">5分钟之前</p>
                     </div>
                 </div>
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -141,7 +170,55 @@
 </div>
 
 
-{% endblock%} {%block script %}
-<script>
-</script>
-{% endblock %}
+<!--历程-->
+<section class="container-fluid" id="history">
+    <div class="cover">
+        <div class="lizi"></div>
+    </div>
+    <div class="container text-center" style="margin-top:100px;margin-bottom:100px;">
+        <div class="col-md-3">
+            <h4>104 网站</h4>
+            <p class="summary">
+                <span>应用出色的设计和高效的代码(JavaScript,HTML5,CSS3,PHP)</span><br>
+                <span>我们用创造性的思维来打造创造性的项目。</span>
+            </p>
+        </div>
+        <div class="col-md-3">
+            <h4>25 APP</h4>
+            <p class="summary">
+                <span>一个应用被连接到一个服务，集中于完成一个动作。</span><br>
+                <span>被称为UI / UX设计。最终提供给观众一个美丽的和无缝的体验。</span>
+            </p>
+        </div>
+        <div class="col-md-3">
+            <h4>136 LOGO</h4>
+            <p class="summary">
+                <span>一个坚实的标识和身份是一个伟大品牌的基础。</span><br>
+                <span>愿与您一起创造这个独特的身份，传达你的品牌信息。</span>
+            </p>
+        </div>
+        <div class="col-md-3">
+            <h4>150 客户</h4>
+            <p class="summary">
+                有时候他们会赞扬我们，有时候会快递啤酒和点心，很高兴和他们一直共事，让我们彼此成为朋友。
+            </p>
+        </div>
+
+
+    </div>
+
+</section>
+
+<!--我们的作品-->
+<div class="container-fluid" id="works">
+    <div class="row">
+        <div class="work">
+            <img src="http://www.seakong.cn/img/work/201605241.jpg" alt="">
+            <div class="work-overlay">
+                <a href="#">预览</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+{% endblock %} {%block script %} {% endblock%}
